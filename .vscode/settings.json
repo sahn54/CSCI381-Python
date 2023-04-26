@@ -1,0 +1,11 @@
+{
+  "python.analysis.typeCheckingMode": "basic",
+  "cSpell.words": [
+    "exitonclick",
+    "highlightthickness",
+    "Kanye",
+    "padx",
+    "pady"
+  ],
+  "python.analysis.extraPaths": ["./Code_100/Day_20"]
+}

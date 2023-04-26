@@ -1,0 +1,30 @@
+Learn about *s unpacking 
+_ place holders 
+
+
+
+
+<Strings>
+
+# str.count(sub[, start[, end]])
+
+# str.find(sub[, start[, end]])
+
+# str.join(iterable)
+
+# str.replace(old, new[, count])
+
+# str.split([sep[, maxsplit]])
+
+
+str.count(sub[, start[, end] 
+sub find the char
+start - start from the letter
+end - end 
+
+str.find( ) - find only one 
+
+
+str.join(iterable)
+
+Return a string which is the concatenation of the strings in the iterable iterable
