@@ -50,8 +50,8 @@
 # # print(is_integer_palindrome(232))
 # print(is_integer_palindrome(123456))
 def isPalindrome(string):
-    mainpoint = len(string) // 2
-    for x in range(mainpoint):
+    mid_point = len(string) // 2
+    for x in range(mid_point):
         char1 = string[x]
         char2 = string[(-1 * x)-1]
         if char1 != char2:
@@ -70,3 +70,13 @@ def isPalindrome_int(number):
 
 print(isPalindrome_int(5005))
 print(isPalindrome("level"))
+# -----------------------------------------------
+
+# def simpleList(list_n):
+#     new= []
+#     for i in list_n:
+#         new.extend(i)
+#     return new
+
+# list_n = [1,2,3,4,5]
+# print(simpleList(list_n))

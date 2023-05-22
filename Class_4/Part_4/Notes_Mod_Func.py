@@ -20,7 +20,7 @@
 # from math import *
 # sqrt(9)
 
-# disdvantage would be spaces of name is will be increase if we use #3
+# disadvantage would be spaces of name is will be increase if we use #3
 
 # Functions
 # def
