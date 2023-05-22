@@ -1,0 +1,31 @@
+Introduction to computers and computing
+• The Python environment
+• Values and data types
+• Input and output
+• Hello World!
+
+• Variables, and assignment
+• Control Structures (if, if/else, while, for)
+• Functions and modules
+• Sequences, lists, strings, sets, tuples, dictionaries and comprehensions
+
+
+• Working with text (More Strings)
+• Dictionaries
+• Unpacking
+• Files
+
+• Generator @
+• Decorators 
+
+
+
+
+
+
+
+Tips: 
+Converting from a sentence to a list 
+Use strip() and split()
+list_input = input_str.strip("").split() #really important
+    print(list_input)

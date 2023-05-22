@@ -1,0 +1,13 @@
+tribe,clan_chief
+Reuben,Elizur son of Shedeur
+Simeon,Shelumiel son of Zurishaddai
+Gad,Nahshon son of Amminadab
+Judah,Nethanel son of Zuar
+Issachar,Eliab son of Helon
+Zebulun,Elishama son of Ammihud
+Ephraim,Gamaliel son of Pedahzur
+Manasseh,Abidan son of Gideoni
+Benjamin,Ahiezer son of Ammishaddai
+Dan,Pagiel son of Ocharan
+Asher,Eliasaph son of Deuel
+Naphtali,Ahira son of Enan

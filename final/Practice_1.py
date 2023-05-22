@@ -112,8 +112,8 @@ def fibonacci(n):
 # and returns a list of unique words in s, in alphabetical order.
 # For example, if s is "hello world, hello universe",
 # the function should return ["hello", "universe", "world"].
-def unique_words(input_str):\
-        # we use a dictionary or a set , i pick a set
+def unique_words(input_str):
+    # we use a dictionary or a set , i pick a set
     my_set = set()
     new_list = []
     # clean up the words by taking out commas symbols and
@@ -122,8 +122,8 @@ def unique_words(input_str):\
     current_list = input_str.split()
     for i in current_list:
         if i not in my_set:
-            my_set.add(i)
-            new_list.append(i)
+            my_set.add(i.strip(","))
+            new_list.append(i.strip(","))
 
     # return a list
     return new_list
@@ -132,25 +132,112 @@ def unique_words(input_str):\
 print(unique_words("hello world, hello universe"))
 
 
-def unique_words_list_com(input_str):\
-        # we use a dictionary or a set , i pick a set
-    current_list = input_str.strip(',').split()
-    return [i for i in current_list if i not in set(current_list[:current_list.index(i)])]
-
-
-print(unique_words("hello world, hello universe"))
+def unique_words_list_com(input_str):
+    my_set = set()
+    current_list = input_str.split()
+    return [word.strip(",") for word in current_list if word.strip(",") not in my_set and (my_set.add(word) or True)]
 
 
 print(unique_words_list_com("hello world, hello universe"))
 
 
-# Write a Python function called binary_search that takes a sorted list of integers and a target integer, and returns the index of the target integer in the list if it is present, or -1 if it is not present. For example, if the input list is [1, 2, 3, 4, 5, 6, 7, 8, 9] and the target integer is 6, the function should return 5.
+# Write a Python function called binary_search that takes a sorted list of integers
+# and a target integer, (two parameters)
+# and returns the index of the target integer in the list if it is present,
+# or -1 if it is not present.
+# For example, if the input list is [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# and the target integer is 6, the function should return 5.
+def binary_search(sorted_list, target_int):
+    # list of integers that is sorted.
+    left = 0
+    right = len(sorted_list) - 1
 
-# Write a Python function called merge_sorted that takes two sorted lists of integers and returns a new sorted list that contains all the elements from both input lists, in ascending order. For example, if the input lists are [1, 3, 5, 7, 9] and [2, 4, 6, 8], the function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+    while left <= right:
+        mid = (left + right) // 2
+        if sorted_list[mid] == target_int:
+            return mid
+        elif sorted_list[mid] < target_int:
+            left = mid+1
+        else:
+            right = mid - 1
+    return -1
 
-# Write a Python function called is_palindrome that takes a string argument s and returns True if s is a palindrome (a word or phrase that reads the same backward as forward), and False otherwise. For example, if s is "racecar", the function should return True.
 
-# Write a Python function called most_common_word that takes a string argument s and returns the most common word in s. If there are multiple words with the same frequency, the function should return the word that
+my_sorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(binary_search(my_sorted_list, 6))  # 5
+print(binary_search(my_sorted_list, 16))  # -1
+
+
+# Write a Python function called merge_sorted that takes two sorted lists of integers
+# and returns a new sorted list that contains all the elements
+# from both input lists,in ascending order.
+# For example, if the input lists are [1, 3, 5, 7, 9] and [2, 4, 6, 8],
+# the function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+
+def merge_sorted(sort_list_1, sort_list_2):  # two sort lists
+    # check if either list is empty
+    if len(sort_list_1) == 0:
+        return sort_list_2
+    elif len(sort_list_2) == 0:
+        return sort_list_1
+
+    # recursive divide-and-conquer approach
+    if sort_list_1[0] < sort_list_2[0]:
+        return [sort_list_1[0]] + merge_sorted(sort_list_1[1:], sort_list_2)
+    else:
+        return [sort_list_2[0]] + merge_sorted(sort_list_1, sort_list_2[1:])
+
+
+my_sorted_list_1 = [2, 4, 6, 8]
+my_sorted_list_2 = [1, 3, 5, 7, 9]
+print(merge_sorted(my_sorted_list_1, my_sorted_list_2))
+
+
+# Write a Python function called is_palindrome that takes a string argument s and returns True
+# if s is a palindrome (a word or phrase that reads the same backward as forward),
+# and False otherwise. For example, if s is "racecar", the function should return True.
+
+
+def is_palindrome(str_p):
+    # str_p is a string
+    size_r = len(str_p)
+    for i in range(len(str_p)):
+        if str_p[i] != str_p[size_r-1]:
+            return False
+        size_r -= 1
+
+    return True
+
+
+ex_string = "racecar"
+print(is_palindrome(ex_string))
+
+# Write a Python function called most_common_word that takes a string argument s and returns the most common word in s.
+# If there are multiple words with the same frequency, the function should return the word that appears first in s.
+# You can assume that s contains only lowercase letters and spaces, with no punctuation.
+# For example, if s is "the quick brown fox jumps over the lazy dog", the function should return "the".
+
+
+def most_common_word(input_str):
+    list_input = input_str.strip(" ").split()  # really important
+    # use a dictionary to solve this problem
+    word_count_dict = {}
+    word_count = set()
+    for word in list_input:
+        word = word.lower()
+        if word not in word_count:
+            word_count.add(word)
+            word_count_dict[word] = 1
+        else:
+            word_count_dict[word] += 1
+    max_value = max(word_count_dict, key=word_count_dict.get)  # type: ignore
+
+    return max_value
+
+
+new_sentence = "hello my my my my the quick brown fox jumps over the lazy dog"
+print(f"Most used word in this string is: {most_common_word(new_sentence)}")
 
 
 # list and dictionary comprehension

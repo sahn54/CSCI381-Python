@@ -17,7 +17,7 @@
 #     print(k)
 #     k += 2
 
-# numSign = int(input("Please unter an integer between 1 ans 10: "))
+# numSign = int(input("Please enter an integer between 1 ans 10: "))
 # k = 0
 # while k <= numSign:
 #     print("*")

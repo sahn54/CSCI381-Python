@@ -29,6 +29,9 @@
 
 # Write a function f with the following behavior: each time f is called it returns the next positive even
 # integer. So, the first time it is called it returns 2, the next time 4 and so on.
+# x = 0
+
+
 # def f():
 #     global x
 #     x += 2
@@ -41,6 +44,9 @@
 #         yield value
 #         value += 2
 
+# print(f())
+# print(f())
+# print(f())
 
 # gen_num = without_f(10)
 # for num in gen_num:

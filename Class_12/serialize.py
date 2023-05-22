@@ -15,7 +15,7 @@ def number_serial():
 
 
 def alphabet_serial():
-    right_string = ord("A")  # 65
+    right_string = ord("A")  # 65 according to ASCII
     left_string = ord("A")
     while right_string and left_string <= 90:
         yield f"{chr(left_string)}{chr(right_string)}"

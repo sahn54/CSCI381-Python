@@ -1,17 +1,3 @@
-# Pickle
-# The pickle function is a powerful tool that can be used to save and restore Python objects. It can be used to
-# save objects to a file, send objects over a network, or store objects in a database.
-# pickle is used to serialize and deserialize Python objects. Serialization is the process of converting an
-# object into a sequence of bytes, while deserialization is the process of converting a sequence of bytes back
-# into an object.
-
-# --------------------------
-
-
-# Serialization - is the process of converting an
-# object into a sequence of bytes
-
-# Deserialization
 
 # Write a program that reads a text file and creates a simplified version of in inverted index.
 invertedDict = dict()

@@ -1,0 +1,12 @@
+Reuben : 46500
+Simeon : 59300
+Gad : 45650
+Judah : 74600
+Issachar : 54400
+Zebulun : 57400
+Ephraim : 40500
+Manasseh : 32200
+Benjamin : 35400
+Dan : 62700
+Asher : 41500
+Naphtali : 53400
